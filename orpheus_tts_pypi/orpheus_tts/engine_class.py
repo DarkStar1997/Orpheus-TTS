@@ -59,6 +59,8 @@ class OrpheusModel:
         engine_args = AsyncEngineArgs(
             model=self.model_name,
             dtype=self.dtype,
+            max_model_len=100000,
+            gpu_memory_utilization=0.95,
             **self.engine_kwargs
         )
         
